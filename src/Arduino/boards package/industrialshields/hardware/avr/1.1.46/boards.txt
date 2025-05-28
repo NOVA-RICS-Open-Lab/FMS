@@ -1,0 +1,1200 @@
+menu.cpu=Model
+
+############################
+###### Ardbox ##############
+############################
+
+ardbox.name=Ardbox family
+ardbox.vid.0=0x2341
+ardbox.pid.0=0x0036
+ardbox.vid.1=0x2341
+ardbox.pid.1=0x8036
+ardbox.vid.2=0x2A03
+ardbox.pid.2=0x0036
+ardbox.vid.3=0x2A03
+ardbox.pid.3=0x8036
+
+ardbox.upload.tool=avrdude
+ardbox.upload.protocol=avr109
+ardbox.upload.maximum_size=28672
+ardbox.upload.maximum_data_size=2560
+ardbox.upload.speed=57600
+ardbox.upload.disable_flushing=true
+ardbox.upload.use_1200bps_touch=true
+ardbox.upload.wait_for_upload_port=true
+
+ardbox.bootloader.tool=avrdude
+ardbox.bootloader.low_fuses=0xff
+ardbox.bootloader.high_fuses=0xd8
+ardbox.bootloader.extended_fuses=0xcb
+ardbox.bootloader.file=ardbox.hex
+ardbox.bootloader.unlock_bits=0x3F
+ardbox.bootloader.lock_bits=0x2F
+
+ardbox.build.mcu=atmega32u4
+ardbox.build.f_cpu=16000000L
+ardbox.build.vid=0x2341
+ardbox.build.pid=0x8036
+ardbox.build.usb_product="Ardbox"
+ardbox.build.board=AVR_LEONARDO
+ardbox.build.core=industrialshields
+
+## Ardbox Analog
+## -------------------------
+ardbox.menu.cpu.ardboxanalog=Ardbox Analog
+ardbox.menu.cpu.ardboxanalog.build.variant=ardboxanalog
+ardbox.menu.cpu.ardboxanalog.build.extra_flags={build.usb_flags} -DARDBOX -DARDBOX_ANALOG
+
+## Ardbox Analog HF (with RS-232 hardware)
+## -------------------------
+ardbox.menu.cpu.ardboxanaloghf232=Ardbox Analog HF w/ HW RS-232
+ardbox.menu.cpu.ardboxanaloghf232.build.variant=ardboxanaloghf
+ardbox.menu.cpu.ardboxanaloghf232.build.extra_flags={build.usb_flags} -DARDBOX_HF -DARDBOX_ANALOG_HF -DARDBOX_ANALOG_HF_RS232
+
+## Ardbox Analog HF (with RS-485 hardware)
+## -------------------------
+ardbox.menu.cpu.ardboxanaloghf485=Ardbox Analog HF w/ HW RS-485
+ardbox.menu.cpu.ardboxanaloghf485.build.variant=ardboxanaloghf
+ardbox.menu.cpu.ardboxanaloghf485.build.extra_flags={build.usb_flags} -DARDBOX_HF -DARDBOX_ANALOG_HF -DARDBOX_ANALOG_HF_RS485
+
+## Ardbox Analog HF+ (with RS-232 hardware)
+## -------------------------
+ardbox.menu.cpu.ardboxanaloghfplus232=Ardbox Analog HF+ w/ HW RS-232
+ardbox.menu.cpu.ardboxanaloghfplus232.build.variant=ardboxanaloghf
+ardbox.menu.cpu.ardboxanaloghfplus232.build.extra_flags={build.usb_flags} -DARDBOX_HF_PLUS -DARDBOX_ANALOG_HF_PLUS -DARDBOX_ANALOG_HF_PLUS_RS232
+
+## Ardbox Analog HF+ (with RS-485 hardware)
+## -------------------------
+ardbox.menu.cpu.ardboxanaloghfplus485=Ardbox Analog HF+ w/ HW RS-485
+ardbox.menu.cpu.ardboxanaloghfplus485.build.variant=ardboxanaloghf
+ardbox.menu.cpu.ardboxanaloghfplus485.build.extra_flags={build.usb_flags} -DARDBOX_HF_PLUS -DARDBOX_ANALOG_HF_PLUS -DARDBOX_ANALOG_HF_PLUS_RS485
+
+## Ardbox Analog HF (legacy)
+## -------------------------
+ardbox.menu.cpu.ardboxanaloghflegacy=Ardbox Analog HF (legacy)
+ardbox.menu.cpu.ardboxanaloghflegacy.build.variant=ardboxanaloghf
+ardbox.menu.cpu.ardboxanaloghflegacy.build.extra_flags={build.usb_flags} -DARDBOX_HF -DARDBOX_ANALOG_HF -DARDBOX_ANALOG_HF_LEGACY
+
+## Ardbox Relay
+## -------------------------
+ardbox.menu.cpu.ardboxrelay=Ardbox Relay
+ardbox.menu.cpu.ardboxrelay.build.variant=ardboxrelay
+ardbox.menu.cpu.ardboxrelay.build.extra_flags={build.usb_flags} -DARDBOX -DARDBOX_RELAY
+
+## Ardbox Relay HF (with RS-232 hardware)
+## -------------------------
+ardbox.menu.cpu.ardboxrelayhf232=Ardbox Relay HF w/ HW RS-232
+ardbox.menu.cpu.ardboxrelayhf232.build.variant=ardboxrelayhf
+ardbox.menu.cpu.ardboxrelayhf232.build.extra_flags={build.usb_flags} -DARDBOX_HF -DARDBOX_RELAY_HF -DARDBOX_RELAY_HF_RS232
+
+## Ardbox Relay HF (with RS-485 hardware)
+## -------------------------
+ardbox.menu.cpu.ardboxrelayhf485=Ardbox Relay HF w/ HW RS-485
+ardbox.menu.cpu.ardboxrelayhf485.build.variant=ardboxrelayhf
+ardbox.menu.cpu.ardboxrelayhf485.build.extra_flags={build.usb_flags} -DARDBOX_HF -DARDBOX_RELAY_HF -DARDBOX_RELAY_HF_RS485
+
+## Ardbox Relay HF+ (with RS-232 hardware)
+## -------------------------
+ardbox.menu.cpu.ardboxrelayhfplus232=Ardbox Relay HF+ w/ HW RS-232
+ardbox.menu.cpu.ardboxrelayhfplus232.build.variant=ardboxrelayhf
+ardbox.menu.cpu.ardboxrelayhfplus232.build.extra_flags={build.usb_flags} -DARDBOX_HF_PLUS -DARDBOX_RELAY_HF_PLUS -DARDBOX_RELAY_HF_PLUS_RS232
+
+## Ardbox Relay HF+ (with RS-485 hardware)
+## -------------------------
+ardbox.menu.cpu.ardboxrelayhfplus485=Ardbox Relay HF+ w/ HW RS-485
+ardbox.menu.cpu.ardboxrelayhfplus485.build.variant=ardboxrelayhf
+ardbox.menu.cpu.ardboxrelayhfplus485.build.extra_flags={build.usb_flags} -DARDBOX_HF_PLUS -DARDBOX_RELAY_HF_PLUS -DARDBOX_RELAY_HF_PLUS_RS485
+
+## Ardbox Relay HF (legacy)
+## -------------------------
+ardbox.menu.cpu.ardboxrelayhflegacy=Ardbox Relay HF (legacy)
+ardbox.menu.cpu.ardboxrelayhflegacy.build.variant=ardboxrelayhf
+ardbox.menu.cpu.ardboxrelayhflegacy.build.extra_flags={build.usb_flags} -DARDBOX_HF -DARDBOX_RELAY_HF -DARDBOX_RELAY_HF_LEGACY
+
+## Ardbox Basic Controller
+## -------------------------
+ardbox.menu.cpu.ardboxbasic=Ardbox Basic Controller
+ardbox.menu.cpu.ardboxbasic.build.variant=ardboxbasic
+ardbox.menu.cpu.ardboxbasic.build.extra_flags={build.usb_flags} -DARDBOX -DARDBOX_BASIC
+
+############################
+###### Ardbox DALI #########
+############################
+
+ardboxdali.name=Ardbox DALI family
+ardboxdali.vid.0=0x2341
+ardboxdali.pid.0=0x0036
+ardboxdali.vid.1=0x2341
+ardboxdali.pid.1=0x8036
+ardboxdali.vid.2=0x2A03
+ardboxdali.pid.2=0x0036
+ardboxdali.vid.3=0x2A03
+ardboxdali.pid.3=0x8036
+
+ardboxdali.upload.tool=avrdude
+ardboxdali.upload.protocol=avr109
+ardboxdali.upload.maximum_size=28672
+ardboxdali.upload.maximum_data_size=2560
+ardboxdali.upload.speed=57600
+ardboxdali.upload.disable_flushing=true
+ardboxdali.upload.use_1200bps_touch=true
+ardboxdali.upload.wait_for_upload_port=true
+
+ardboxdali.bootloader.tool=avrdude
+ardboxdali.bootloader.low_fuses=0xff
+ardboxdali.bootloader.high_fuses=0xd8
+ardboxdali.bootloader.extended_fuses=0xcb
+ardboxdali.bootloader.file=ardbox.hex
+ardboxdali.bootloader.unlock_bits=0x3F
+ardboxdali.bootloader.lock_bits=0x2F
+
+ardboxdali.build.mcu=atmega32u4
+ardboxdali.build.f_cpu=16000000L
+ardboxdali.build.vid=0x2341
+ardboxdali.build.pid=0x8036
+ardboxdali.build.usb_product="Ardbox"
+ardboxdali.build.board=AVR_LEONARDO
+ardboxdali.build.core=industrialshields
+
+## Ardbox Analog HF+ (with RS-232 hardware)
+## -------------------------
+ardboxdali.menu.cpu.ardboxanaloghfplus232dali=Ardbox Analog HF+ w/ HW RS-232 DALI
+ardboxdali.menu.cpu.ardboxanaloghfplus232dali.build.variant=ardboxanaloghf
+ardboxdali.menu.cpu.ardboxanaloghfplus232dali.build.extra_flags={build.usb_flags} -DARDBOX_HF_PLUS -DARDBOX_ANALOG_HF_PLUS -DARDBOX_ANALOG_HF_PLUS_RS232 -DARDBOX_DALI_HF_PLUS
+
+## Ardbox Analog HF+ (with RS-485 hardware)
+## -------------------------
+ardboxdali.menu.cpu.ardboxanaloghfplus485dali=Ardbox Analog HF+ w/ HW RS-485 DALI
+ardboxdali.menu.cpu.ardboxanaloghfplus485dali.build.variant=ardboxanaloghf
+ardboxdali.menu.cpu.ardboxanaloghfplus485dali.build.extra_flags={build.usb_flags} -DARDBOX_HF_PLUS -DARDBOX_ANALOG_HF_PLUS -DARDBOX_ANALOG_HF_PLUS_RS485 -DARDBOX_DALI_HF_PLUS
+
+## Ardbox Relay HF+ (with RS-232 hardware)
+## -------------------------
+ardboxdali.menu.cpu.ardboxrelayhfplus232dali=Ardbox Relay HF+ w/ HW RS-232 DALI
+ardboxdali.menu.cpu.ardboxrelayhfplus232dali.build.variant=ardboxrelayhf
+ardboxdali.menu.cpu.ardboxrelayhfplus232dali.build.extra_flags={build.usb_flags} -DARDBOX_HF_PLUS -DARDBOX_RELAY_HF_PLUS -DARDBOX_RELAY_HF_PLUS_RS232 -DARDBOX_DALI_HF_PLUS
+
+## Ardbox Relay HF+ (with RS-485 hardware)
+## -------------------------
+ardboxdali.menu.cpu.ardboxrelayhfplus485dali=Ardbox Relay HF+ w/ HW RS-485 DALI
+ardboxdali.menu.cpu.ardboxrelayhfplus485dali.build.variant=ardboxrelayhf
+ardboxdali.menu.cpu.ardboxrelayhfplus485dali.build.extra_flags={build.usb_flags} -DARDBOX_HF_PLUS -DARDBOX_RELAY_HF_PLUS -DARDBOX_RELAY_HF_PLUS_RS485 -DARDBOX_DALI_HF_PLUS
+
+############################
+###### Ardbox GPRS #########
+############################
+
+ardboxgprs.name=Ardbox GPRS family
+ardboxgprs.vid.0=0x2341
+ardboxgprs.pid.0=0x0036
+ardboxgprs.vid.1=0x2341
+ardboxgprs.pid.1=0x8036
+ardboxgprs.vid.2=0x2A03
+ardboxgprs.pid.2=0x0036
+ardboxgprs.vid.3=0x2A03
+ardboxgprs.pid.3=0x8036
+
+ardboxgprs.upload.tool=avrdude
+ardboxgprs.upload.protocol=avr109
+ardboxgprs.upload.maximum_size=28672
+ardboxgprs.upload.maximum_data_size=2560
+ardboxgprs.upload.speed=57600
+ardboxgprs.upload.disable_flushing=true
+ardboxgprs.upload.use_1200bps_touch=true
+ardboxgprs.upload.wait_for_upload_port=true
+
+ardboxgprs.bootloader.tool=avrdude
+ardboxgprs.bootloader.low_fuses=0xff
+ardboxgprs.bootloader.high_fuses=0xd8
+ardboxgprs.bootloader.extended_fuses=0xcb
+ardboxgprs.bootloader.file=ardbox.hex
+ardboxgprs.bootloader.unlock_bits=0x3F
+ardboxgprs.bootloader.lock_bits=0x2F
+
+ardboxgprs.build.mcu=atmega32u4
+ardboxgprs.build.f_cpu=16000000L
+ardboxgprs.build.vid=0x2341
+ardboxgprs.build.pid=0x8036
+ardboxgprs.build.usb_product="Ardbox"
+ardboxgprs.build.board=AVR_LEONARDO
+ardboxgprs.build.core=industrialshields
+
+## Ardbox Analog HF+ (with RS-232 hardware)
+## -------------------------
+ardboxgprs.menu.cpu.ardboxanaloghfplus232gprs=Ardbox Analog HF+ w/ HW RS-232 GPRS
+ardboxgprs.menu.cpu.ardboxanaloghfplus232gprs.build.variant=ardboxanaloghf
+ardboxgprs.menu.cpu.ardboxanaloghfplus232gprs.build.extra_flags={build.usb_flags} -DARDBOX_HF_PLUS -DARDBOX_ANALOG_HF_PLUS -DARDBOX_ANALOG_HF_PLUS_RS232 -DARDBOX_GPRS_HF_PLUS
+
+## Ardbox Analog HF+ (with RS-485 hardware)
+## -------------------------
+ardboxgprs.menu.cpu.ardboxanaloghfplus485gprs=Ardbox Analog HF+ w/ HW RS-485 GPRS
+ardboxgprs.menu.cpu.ardboxanaloghfplus485gprs.build.variant=ardboxanaloghf
+ardboxgprs.menu.cpu.ardboxanaloghfplus485gprs.build.extra_flags={build.usb_flags} -DARDBOX_HF_PLUS -DARDBOX_ANALOG_HF_PLUS -DARDBOX_ANALOG_HF_PLUS_RS485 -DARDBOX_GPRS_HF_PLUS
+
+## Ardbox Relay HF+ (with RS-232 hardware)
+## -------------------------
+ardboxgprs.menu.cpu.ardboxrelayhfplus232gprs=Ardbox Relay HF+ w/ HW RS-232 GPRS
+ardboxgprs.menu.cpu.ardboxrelayhfplus232gprs.build.variant=ardboxrelayhf
+ardboxgprs.menu.cpu.ardboxrelayhfplus232gprs.build.extra_flags={build.usb_flags} -DARDBOX_HF_PLUS -DARDBOX_RELAY_HF_PLUS -DARDBOX_RELAY_HF_PLUS_RS232 -DARDBOX_GPRS_HF_PLUS
+
+## Ardbox Relay HF+ (with RS-485 hardware)
+## -------------------------
+ardboxgprs.menu.cpu.ardboxrelayhfplus485gprs=Ardbox Relay HF+ w/ HW RS-485 GPRS
+ardboxgprs.menu.cpu.ardboxrelayhfplus485gprs.build.variant=ardboxrelayhf
+ardboxgprs.menu.cpu.ardboxrelayhfplus485gprs.build.extra_flags={build.usb_flags} -DARDBOX_HF_PLUS -DARDBOX_RELAY_HF_PLUS -DARDBOX_RELAY_HF_PLUS_RS485 -DARDBOX_GPRS_HF_PLUS
+
+############################
+###### Ardbox WiFi #########
+############################
+
+ardboxwifi.name=Ardbox WiFi/BT family
+ardboxwifi.vid.0=0x2341
+ardboxwifi.pid.0=0x0036
+ardboxwifi.vid.1=0x2341
+ardboxwifi.pid.1=0x8036
+ardboxwifi.vid.2=0x2A03
+ardboxwifi.pid.2=0x0036
+ardboxwifi.vid.3=0x2A03
+ardboxwifi.pid.3=0x8036
+
+ardboxwifi.upload.tool=avrdude
+ardboxwifi.upload.protocol=avr109
+ardboxwifi.upload.maximum_size=28672
+ardboxwifi.upload.maximum_data_size=2560
+ardboxwifi.upload.speed=57600
+ardboxwifi.upload.disable_flushing=true
+ardboxwifi.upload.use_1200bps_touch=true
+ardboxwifi.upload.wait_for_upload_port=true
+
+ardboxwifi.bootloader.tool=avrdude
+ardboxwifi.bootloader.low_fuses=0xff
+ardboxwifi.bootloader.high_fuses=0xd8
+ardboxwifi.bootloader.extended_fuses=0xcb
+ardboxwifi.bootloader.file=ardbox.hex
+ardboxwifi.bootloader.unlock_bits=0x3F
+ardboxwifi.bootloader.lock_bits=0x2F
+
+ardboxwifi.build.mcu=atmega32u4
+ardboxwifi.build.f_cpu=16000000L
+ardboxwifi.build.vid=0x2341
+ardboxwifi.build.pid=0x8036
+ardboxwifi.build.usb_product="Ardbox"
+ardboxwifi.build.board=AVR_LEONARDO
+ardboxwifi.build.core=industrialshields
+
+## Ardbox Analog HF+ (with RS-232 hardware)
+## -------------------------
+ardboxwifi.menu.cpu.ardboxanaloghfplus232wifi=Ardbox Analog HF+ w/ HW RS-232 WiFi/BT
+ardboxwifi.menu.cpu.ardboxanaloghfplus232wifi.build.variant=ardboxanaloghf
+ardboxwifi.menu.cpu.ardboxanaloghfplus232wifi.build.extra_flags={build.usb_flags} -DARDBOX_HF_PLUS -DARDBOX_ANALOG_HF_PLUS -DARDBOX_ANALOG_HF_PLUS_RS232 -DARDBOX_WIFI_HF_PLUS
+
+## Ardbox Analog HF+ (with RS-485 hardware)
+## -------------------------
+ardboxwifi.menu.cpu.ardboxanaloghfplus485wifi=Ardbox Analog HF+ w/ HW RS-485 WiFi/BT
+ardboxwifi.menu.cpu.ardboxanaloghfplus485wifi.build.variant=ardboxanaloghf
+ardboxwifi.menu.cpu.ardboxanaloghfplus485wifi.build.extra_flags={build.usb_flags} -DARDBOX_HF_PLUS -DARDBOX_ANALOG_HF_PLUS -DARDBOX_ANALOG_HF_PLUS_RS485 -DARDBOX_WIFI_HF_PLUS
+
+## Ardbox Relay HF+ (with RS-232 hardware)
+## -------------------------
+ardboxwifi.menu.cpu.ardboxrelayhfplus232wifi=Ardbox Relay HF+ w/ HW RS-232 WiFi/BT
+ardboxwifi.menu.cpu.ardboxrelayhfplus232wifi.build.variant=ardboxrelayhf
+ardboxwifi.menu.cpu.ardboxrelayhfplus232wifi.build.extra_flags={build.usb_flags} -DARDBOX_HF_PLUS -DARDBOX_RELAY_HF_PLUS -DARDBOX_RELAY_HF_PLUS_RS232 -DARDBOX_WIFI_HF_PLUS
+
+## Ardbox Relay HF+ (with RS-485 hardware)
+## -------------------------
+ardboxwifi.menu.cpu.ardboxrelayhfplus485wifi=Ardbox Relay HF+ w/ HW RS-485 WiFi/BT
+ardboxwifi.menu.cpu.ardboxrelayhfplus485wifi.build.variant=ardboxrelayhf
+ardboxwifi.menu.cpu.ardboxrelayhfplus485wifi.build.extra_flags={build.usb_flags} -DARDBOX_HF_PLUS -DARDBOX_RELAY_HF_PLUS -DARDBOX_RELAY_HF_PLUS_RS485 -DARDBOX_WIFI_HF_PLUS
+
+############################
+###### Ardbox LoRa #########
+############################
+
+ardboxlora.name=Ardbox LoRa family
+ardboxlora.vid.0=0x2341
+ardboxlora.pid.0=0x0036
+ardboxlora.vid.1=0x2341
+ardboxlora.pid.1=0x8036
+ardboxlora.vid.2=0x2A03
+ardboxlora.pid.2=0x0036
+ardboxlora.vid.3=0x2A03
+ardboxlora.pid.3=0x8036
+
+ardboxlora.upload.tool=avrdude
+ardboxlora.upload.protocol=avr109
+ardboxlora.upload.maximum_size=28672
+ardboxlora.upload.maximum_data_size=2560
+ardboxlora.upload.speed=57600
+ardboxlora.upload.disable_flushing=true
+ardboxlora.upload.use_1200bps_touch=true
+ardboxlora.upload.wait_for_upload_port=true
+
+ardboxlora.bootloader.tool=avrdude
+ardboxlora.bootloader.low_fuses=0xff
+ardboxlora.bootloader.high_fuses=0xd8
+ardboxlora.bootloader.extended_fuses=0xcb
+ardboxlora.bootloader.file=ardbox.hex
+ardboxlora.bootloader.unlock_bits=0x3F
+ardboxlora.bootloader.lock_bits=0x2F
+
+ardboxlora.build.mcu=atmega32u4
+ardboxlora.build.f_cpu=16000000L
+ardboxlora.build.vid=0x2341
+ardboxlora.build.pid=0x8036
+ardboxlora.build.usb_product="Ardbox"
+ardboxlora.build.board=AVR_LEONARDO
+ardboxlora.build.core=industrialshields
+
+## Ardbox Analog HF+ LoRa (with RS-232 hardware)
+## -------------------------
+ardboxlora.menu.cpu.ardboxanaloghfplus232lora=LoRa Ardbox Analog HF+ w/ HW RS-232
+ardboxlora.menu.cpu.ardboxanaloghfplus232lora.build.variant=ardboxanaloghf
+ardboxlora.menu.cpu.ardboxanaloghfplus232lora.build.extra_flags={build.usb_flags} -DARDBOX_HF_PLUS -DARDBOX_ANALOG_HF_PLUS -DARDBOX_ANALOG_HF_PLUS_RS232 -DARDBOX_LORA_HF_PLUS
+
+## Ardbox Analog HF+ LoRa (with RS-485 hardware)
+## -------------------------
+ardboxlora.menu.cpu.ardboxanaloghfplus485lora=LoRa Ardbox Analog HF+ w/ HW RS-485
+ardboxlora.menu.cpu.ardboxanaloghfplus485lora.build.variant=ardboxanaloghf
+ardboxlora.menu.cpu.ardboxanaloghfplus485lora.build.extra_flags={build.usb_flags} -DARDBOX_HF_PLUS -DARDBOX_ANALOG_HF_PLUS -DARDBOX_ANALOG_HF_PLUS_RS485 -DARDBOX_LORA_HF_PLUS
+
+## Ardbox Relay HF+ LoRa (with RS-232 hardware)
+## -------------------------
+ardboxlora.menu.cpu.ardboxrelayhfplus232lora=LoRa Ardbox Relay HF+ w/ HW RS-232
+ardboxlora.menu.cpu.ardboxrelayhfplus232lora.build.variant=ardboxrelayhf
+ardboxlora.menu.cpu.ardboxrelayhfplus232lora.build.extra_flags={build.usb_flags} -DARDBOX_HF_PLUS -DARDBOX_RELAY_HF_PLUS -DARDBOX_RELAY_HF_PLUS_RS232 -DARDBOX_LORA_HF_PLUS
+
+## Ardbox Relay HF+ LoRa (with RS-485 hardware)
+## -------------------------
+ardboxlora.menu.cpu.ardboxrelayhfplus485lora=LoRa Ardbox Relay HF+ w/ HW RS-485
+ardboxlora.menu.cpu.ardboxrelayhfplus485lora.build.variant=ardboxrelayhf
+ardboxlora.menu.cpu.ardboxrelayhfplus485lora.build.extra_flags={build.usb_flags} -DARDBOX_HF_PLUS -DARDBOX_RELAY_HF_PLUS -DARDBOX_RELAY_HF_PLUS_RS485 -DARDBOX_LORA_HF_PLUS
+
+
+######################
+###### M-Duino #######
+######################
+
+mduino.name=M-Duino family
+
+mduino.vid.0=0x2341
+mduino.pid.0=0x0010
+mduino.vid.1=0x2341
+mduino.pid.1=0x0042
+mduino.vid.2=0x2A03
+mduino.pid.2=0x0010
+mduino.vid.3=0x2A03
+mduino.pid.3=0x0042
+mduino.vid.4=0x2341
+mduino.pid.4=0x0210
+mduino.vid.5=0x2341
+mduino.pid.5=0x0242
+
+mduino.upload.tool=avrdude
+mduino.upload.maximum_data_size=8192
+mduino.upload.protocol=wiring
+mduino.upload.maximum_size=253952
+mduino.upload.speed=115200
+
+mduino.bootloader.tool=avrdude
+mduino.bootloader.low_fuses=0xFF
+mduino.bootloader.unlock_bits=0x3F
+mduino.bootloader.lock_bits=0x0F
+mduino.bootloader.high_fuses=0xD8
+mduino.bootloader.extended_fuses=0xFD
+mduino.bootloader.file=mduino.hex
+
+mduino.build.f_cpu=16000000L
+mduino.build.core=industrialshields
+mduino.build.mcu=atmega2560
+mduino.build.board=AVR_MEGA2560
+mduino.build.usb_product="M-Duino"
+
+## M-Duino 19R
+## -------------------------
+mduino.menu.cpu.mduino19r=M-Duino 19R
+mduino.menu.cpu.mduino19r.build.variant=mduinorelay
+mduino.menu.cpu.mduino19r.build.extra_flags=-DMDUINO -DMDUINO_19R
+
+## M-Duino 19R+
+## -------------------------
+mduino.menu.cpu.mduino19rplus=M-Duino 19R+
+mduino.menu.cpu.mduino19rplus.build.variant=mduinoplus
+mduino.menu.cpu.mduino19rplus.build.extra_flags=-DMDUINO_PLUS -DMDUINO_19R_PLUS
+
+## M-Duino 21
+## -------------------------
+mduino.menu.cpu.mduino21=M-Duino 21
+mduino.menu.cpu.mduino21.build.variant=mduino
+mduino.menu.cpu.mduino21.build.extra_flags=-DMDUINO -DMDUINO_21
+
+## M-Duino 21+
+## -------------------------
+mduino.menu.cpu.mduino21plus=M-Duino 21+
+mduino.menu.cpu.mduino21plus.build.variant=mduinoplus
+mduino.menu.cpu.mduino21plus.build.extra_flags=-DMDUINO_PLUS -DMDUINO_21_PLUS
+
+## M-Duino 38AR+
+## -------------------------
+mduino.menu.cpu.mduino38arplus=M-Duino 38AR+
+mduino.menu.cpu.mduino38arplus.build.variant=mduinoplus
+mduino.menu.cpu.mduino38arplus.build.extra_flags=-DMDUINO_PLUS -DMDUINO_38AR_PLUS
+
+## M-Duino 38R
+## -------------------------
+mduino.menu.cpu.mduino38r=M-Duino 38R
+mduino.menu.cpu.mduino38r.build.variant=mduinorelay
+mduino.menu.cpu.mduino38r.build.extra_flags=-DMDUINO -DMDUINO_38R
+
+## M-Duino 38R+
+## -------------------------
+mduino.menu.cpu.mduino38rplus=M-Duino 38R+
+mduino.menu.cpu.mduino38rplus.build.variant=mduinoplus
+mduino.menu.cpu.mduino38rplus.build.extra_flags=-DMDUINO_PLUS -DMDUINO_38R_PLUS
+
+## M-Duino 42
+## -------------------------
+mduino.menu.cpu.mduino42=M-Duino 42
+mduino.menu.cpu.mduino42.build.variant=mduino
+mduino.menu.cpu.mduino42.build.extra_flags=-DMDUINO -DMDUINO_42
+
+## M-Duino 42+
+## -------------------------
+mduino.menu.cpu.mduino42plus=M-Duino 42+
+mduino.menu.cpu.mduino42plus.build.variant=mduinoplus
+mduino.menu.cpu.mduino42plus.build.extra_flags=-DMDUINO_PLUS -DMDUINO_42_PLUS
+
+## M-Duino 50RRA+
+## -------------------------
+mduino.menu.cpu.mduino50rraplus=M-Duino 50RRA+
+mduino.menu.cpu.mduino50rraplus.build.variant=mduinoplus
+mduino.menu.cpu.mduino50rraplus.build.extra_flags=-DMDUINO_PLUS -DMDUINO_50RRA_PLUS
+
+## M-Duino 53ARR+
+## -------------------------
+mduino.menu.cpu.mduino53arrplus=M-Duino 53ARR+
+mduino.menu.cpu.mduino53arrplus.build.variant=mduinoplus
+mduino.menu.cpu.mduino53arrplus.build.extra_flags=-DMDUINO_PLUS -DMDUINO_53ARR_PLUS
+
+## M-Duino 54ARA+
+## -------------------------
+mduino.menu.cpu.mduino54araplus=M-Duino 54ARA+
+mduino.menu.cpu.mduino54araplus.build.variant=mduinoplus
+mduino.menu.cpu.mduino54araplus.build.extra_flags=-DMDUINO_PLUS -DMDUINO_54ARA_PLUS
+
+## M-Duino 57AAR+
+## -------------------------
+mduino.menu.cpu.mduino57aarplus=M-Duino 57AAR+
+mduino.menu.cpu.mduino57aarplus.build.variant=mduinoplus
+mduino.menu.cpu.mduino57aarplus.build.extra_flags=-DMDUINO_PLUS -DMDUINO_57AAR_PLUS
+
+## M-Duino 57R
+## -------------------------
+mduino.menu.cpu.mduino57r=M-Duino 57R
+mduino.menu.cpu.mduino57r.build.variant=mduinorelay
+mduino.menu.cpu.mduino57r.build.extra_flags=-DMDUINO -DMDUINO_57R
+
+## M-Duino 57R+
+## -------------------------
+mduino.menu.cpu.mduino57rplus=M-Duino 57R+
+mduino.menu.cpu.mduino57rplus.build.variant=mduinoplus
+mduino.menu.cpu.mduino57rplus.build.extra_flags=-DMDUINO_PLUS -DMDUINO_57R_PLUS
+
+## M-Duino 58
+## -------------------------
+mduino.menu.cpu.mduino58=M-Duino 58
+mduino.menu.cpu.mduino58.build.variant=mduino
+mduino.menu.cpu.mduino58.build.extra_flags=-DMDUINO -DMDUINO_58
+
+## M-Duino 58+
+## -------------------------
+mduino.menu.cpu.mduino58plus=M-Duino 58+
+mduino.menu.cpu.mduino58plus.build.variant=mduinoplus
+mduino.menu.cpu.mduino58plus.build.extra_flags=-DMDUINO_PLUS -DMDUINO_58_PLUS
+
+######################
+#### M-Duino DALI ####
+######################
+
+mduinodali.name=M-Duino DALI family
+
+mduinodali.vid.0=0x2341
+mduinodali.pid.0=0x0010
+mduinodali.vid.1=0x2341
+mduinodali.pid.1=0x0042
+mduinodali.vid.2=0x2A03
+mduinodali.pid.2=0x0010
+mduinodali.vid.3=0x2A03
+mduinodali.pid.3=0x0042
+mduinodali.vid.4=0x2341
+mduinodali.pid.4=0x0210
+mduinodali.vid.5=0x2341
+mduinodali.pid.5=0x0242
+
+mduinodali.upload.tool=avrdude
+mduinodali.upload.maximum_data_size=8192
+mduinodali.upload.protocol=wiring
+mduinodali.upload.maximum_size=253952
+mduinodali.upload.speed=115200
+
+mduinodali.bootloader.tool=avrdude
+mduinodali.bootloader.low_fuses=0xFF
+mduinodali.bootloader.unlock_bits=0x3F
+mduinodali.bootloader.lock_bits=0x0F
+mduinodali.bootloader.high_fuses=0xD8
+mduinodali.bootloader.extended_fuses=0xFD
+mduinodali.bootloader.file=mduino.hex
+
+mduinodali.build.f_cpu=16000000L
+mduinodali.build.core=industrialshields
+mduinodali.build.mcu=atmega2560
+mduinodali.build.board=AVR_MEGA2560
+mduinodali.build.usb_product="M-Duino"
+
+## M-Duino 19R+ DALI
+## -------------------------
+mduinodali.menu.cpu.mduino19rplusdali=M-Duino 19R+ DALI
+mduinodali.menu.cpu.mduino19rplusdali.build.variant=mduinoplus
+mduinodali.menu.cpu.mduino19rplusdali.build.extra_flags=-DMDUINO_PLUS -DMDUINO_19R_PLUS -DMDUINO_DALI_PLUS
+
+## M-Duino 21+ DALI
+## -------------------------
+mduinodali.menu.cpu.mduino21plusdali=M-Duino 21+ DALI
+mduinodali.menu.cpu.mduino21plusdali.build.variant=mduinoplus
+mduinodali.menu.cpu.mduino21plusdali.build.extra_flags=-DMDUINO_PLUS -DMDUINO_21_PLUS -DMDUINO_DALI_PLUS
+
+## M-Duino 38AR+ DALI
+## -------------------------
+mduinodali.menu.cpu.mduino38arplusdali=M-Duino 38AR+ DALI
+mduinodali.menu.cpu.mduino38arplusdali.build.variant=mduinoplus
+mduinodali.menu.cpu.mduino38arplusdali.build.extra_flags=-DMDUINO_PLUS -DMDUINO_38AR_PLUS -DMDUINO_DALI_PLUS
+
+## M-Duino 38R+ DALI
+## -------------------------
+mduinodali.menu.cpu.mduino38rplusdali=M-Duino 38R+ DALI
+mduinodali.menu.cpu.mduino38rplusdali.build.variant=mduinoplus
+mduinodali.menu.cpu.mduino38rplusdali.build.extra_flags=-DMDUINO_PLUS -DMDUINO_38R_PLUS -DMDUINO_DALI_PLUS
+
+## M-Duino 42+ DALI
+## -------------------------
+mduinodali.menu.cpu.mduino42plusdali=M-Duino 42+ DALI
+mduinodali.menu.cpu.mduino42plusdali.build.variant=mduinoplus
+mduinodali.menu.cpu.mduino42plusdali.build.extra_flags=-DMDUINO_PLUS -DMDUINO_42_PLUS -DMDUINO_DALI_PLUS
+
+## M-Duino 50RRA+ DALI
+## -------------------------
+mduinodali.menu.cpu.mduino50rraplusdali=M-Duino 50RRA+ DALI
+mduinodali.menu.cpu.mduino50rraplusdali.build.variant=mduinoplus
+mduinodali.menu.cpu.mduino50rraplusdali.build.extra_flags=-DMDUINO_PLUS -DMDUINO_50RRA_PLUS -DMDUINO_DALI_PLUS
+
+## M-Duino 53ARR+ DALI
+## -------------------------
+mduinodali.menu.cpu.mduino53arrplusdali=M-Duino 53ARR+ DALI
+mduinodali.menu.cpu.mduino53arrplusdali.build.variant=mduinoplus
+mduinodali.menu.cpu.mduino53arrplusdali.build.extra_flags=-DMDUINO_PLUS -DMDUINO_53ARR_PLUS -DMDUINO_DALI_PLUS
+
+## M-Duino 54ARA+ DALI
+## -------------------------
+mduinodali.menu.cpu.mduino54araplusdali=M-Duino 54ARA+ DALI
+mduinodali.menu.cpu.mduino54araplusdali.build.variant=mduinoplus
+mduinodali.menu.cpu.mduino54araplusdali.build.extra_flags=-DMDUINO_PLUS -DMDUINO_54ARA_PLUS -DMDUINO_DALI_PLUS
+
+## M-Duino 57AAR+ DALI
+## -------------------------
+mduinodali.menu.cpu.mduino57aarplusdali=M-Duino 57AAR+ DALI
+mduinodali.menu.cpu.mduino57aarplusdali.build.variant=mduinoplus
+mduinodali.menu.cpu.mduino57aarplusdali.build.extra_flags=-DMDUINO_PLUS -DMDUINO_57AAR_PLUS -DMDUINO_DALI_PLUS
+
+## M-Duino 57R+ DALI
+## -------------------------
+mduinodali.menu.cpu.mduino57rplusdali=M-Duino 57R+ DALI
+mduinodali.menu.cpu.mduino57rplusdali.build.variant=mduinoplus
+mduinodali.menu.cpu.mduino57rplusdali.build.extra_flags=-DMDUINO_PLUS -DMDUINO_57R_PLUS -DMDUINO_DALI_PLUS
+
+## M-Duino 58+ DALI
+## -------------------------
+mduinodali.menu.cpu.mduino58plusdali=M-Duino 58+ DALI
+mduinodali.menu.cpu.mduino58plusdali.build.variant=mduinoplus
+mduinodali.menu.cpu.mduino58plusdali.build.extra_flags=-DMDUINO_PLUS -DMDUINO_58_PLUS -DMDUINO_DALI_PLUS
+
+######################
+#### M-Duino GPRS ####
+######################
+
+mduinogprs.name=M-Duino GPRS family
+
+mduinogprs.vid.0=0x2341
+mduinogprs.pid.0=0x0010
+mduinogprs.vid.1=0x2341
+mduinogprs.pid.1=0x0042
+mduinogprs.vid.2=0x2A03
+mduinogprs.pid.2=0x0010
+mduinogprs.vid.3=0x2A03
+mduinogprs.pid.3=0x0042
+mduinogprs.vid.4=0x2341
+mduinogprs.pid.4=0x0210
+mduinogprs.vid.5=0x2341
+mduinogprs.pid.5=0x0242
+
+mduinogprs.upload.tool=avrdude
+mduinogprs.upload.maximum_data_size=8192
+mduinogprs.upload.protocol=wiring
+mduinogprs.upload.maximum_size=253952
+mduinogprs.upload.speed=115200
+
+mduinogprs.bootloader.tool=avrdude
+mduinogprs.bootloader.low_fuses=0xFF
+mduinogprs.bootloader.unlock_bits=0x3F
+mduinogprs.bootloader.lock_bits=0x0F
+mduinogprs.bootloader.high_fuses=0xD8
+mduinogprs.bootloader.extended_fuses=0xFD
+mduinogprs.bootloader.file=mduino.hex
+
+mduinogprs.build.f_cpu=16000000L
+mduinogprs.build.core=industrialshields
+mduinogprs.build.mcu=atmega2560
+mduinogprs.build.board=AVR_MEGA2560
+mduinogprs.build.usb_product="M-Duino"
+
+## M-Duino GPRS 19R+
+## -------------------------
+mduinogprs.menu.cpu.mduino19rplusgprs=M-Duino 19R+ GPRS
+mduinogprs.menu.cpu.mduino19rplusgprs.build.variant=mduinoplus
+mduinogprs.menu.cpu.mduino19rplusgprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_19R_PLUS -DMDUINO_GPRS_PLUS
+
+## M-Duino GPRS 21+
+## -------------------------
+mduinogprs.menu.cpu.mduino21plusgprs=M-Duino 21+ GPRS
+mduinogprs.menu.cpu.mduino21plusgprs.build.variant=mduinoplus
+mduinogprs.menu.cpu.mduino21plusgprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_21_PLUS -DMDUINO_GPRS_PLUS
+
+## M-Duino GPRS 38AR+
+## -------------------------
+mduinogprs.menu.cpu.mduino38arplusgprs=M-Duino 38AR+ GPRS
+mduinogprs.menu.cpu.mduino38arplusgprs.build.variant=mduinoplus
+mduinogprs.menu.cpu.mduino38arplusgprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_38AR_PLUS -DMDUINO_GPRS_PLUS
+
+## M-Duino GPRS 38R+
+## -------------------------
+mduinogprs.menu.cpu.mduino38rplusgprs=M-Duino 38R+ GPRS
+mduinogprs.menu.cpu.mduino38rplusgprs.build.variant=mduinoplus
+mduinogprs.menu.cpu.mduino38rplusgprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_38R_PLUS -DMDUINO_GPRS_PLUS
+
+## M-Duino GPRS 42+
+## -------------------------
+mduinogprs.menu.cpu.mduino42plusgprs=M-Duino 42+ GPRS
+mduinogprs.menu.cpu.mduino42plusgprs.build.variant=mduinoplus
+mduinogprs.menu.cpu.mduino42plusgprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_42_PLUS -DMDUINO_GPRS_PLUS
+
+## M-Duino GPRS 50RRA+
+## -------------------------
+mduinogprs.menu.cpu.mduino50rraplusgprs=M-Duino 50RRA+ GPRS
+mduinogprs.menu.cpu.mduino50rraplusgprs.build.variant=mduinoplus
+mduinogprs.menu.cpu.mduino50rraplusgprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_50RRA_PLUS -DMDUINO_GPRS_PLUS
+
+## M-Duino GPRS 53ARR+
+## -------------------------
+mduinogprs.menu.cpu.mduino53arrplusgprs=M-Duino 53ARR+ GPRS
+mduinogprs.menu.cpu.mduino53arrplusgprs.build.variant=mduinoplus
+mduinogprs.menu.cpu.mduino53arrplusgprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_53ARR_PLUS -DMDUINO_GPRS_PLUS
+
+## M-Duino GPRS 54ARA+
+## -------------------------
+mduinogprs.menu.cpu.mduino54araplusgprs=M-Duino 54ARA+ GPRS
+mduinogprs.menu.cpu.mduino54araplusgprs.build.variant=mduinoplus
+mduinogprs.menu.cpu.mduino54araplusgprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_54ARA_PLUS -DMDUINO_GPRS_PLUS
+
+## M-Duino GPRS 57AAR+
+## -------------------------
+mduinogprs.menu.cpu.mduino57aarplusgprs=M-Duino 57AAR+ GPRS
+mduinogprs.menu.cpu.mduino57aarplusgprs.build.variant=mduinoplus
+mduinogprs.menu.cpu.mduino57aarplusgprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_57AAR_PLUS -DMDUINO_GPRS_PLUS
+
+## M-Duino GPRS 57R+
+## -------------------------
+mduinogprs.menu.cpu.mduino57rplusgprs=M-Duino 57R+ GPRS
+mduinogprs.menu.cpu.mduino57rplusgprs.build.variant=mduinoplus
+mduinogprs.menu.cpu.mduino57rplusgprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_57R_PLUS -DMDUINO_GPRS_PLUS
+
+## M-Duino GPRS 58+
+## -------------------------
+mduinogprs.menu.cpu.mduino58plusgprs=M-Duino 58+ GPRS
+mduinogprs.menu.cpu.mduino58plusgprs.build.variant=mduinoplus
+mduinogprs.menu.cpu.mduino58plusgprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_58_PLUS -DMDUINO_GPRS_PLUS
+
+
+######################
+#### M-Duino LoRa ####
+######################
+
+mduinolora.name=M-Duino LoRa family
+
+mduinolora.vid.0=0x2341
+mduinolora.pid.0=0x0010
+mduinolora.vid.1=0x2341
+mduinolora.pid.1=0x0042
+mduinolora.vid.2=0x2A03
+mduinolora.pid.2=0x0010
+mduinolora.vid.3=0x2A03
+mduinolora.pid.3=0x0042
+mduinolora.vid.4=0x2341
+mduinolora.pid.4=0x0210
+mduinolora.vid.5=0x2341
+mduinolora.pid.5=0x0242
+
+mduinolora.upload.tool=avrdude
+mduinolora.upload.maximum_data_size=8192
+mduinolora.upload.protocol=wiring
+mduinolora.upload.maximum_size=253952
+mduinolora.upload.speed=115200
+
+mduinolora.bootloader.tool=avrdude
+mduinolora.bootloader.low_fuses=0xFF
+mduinolora.bootloader.unlock_bits=0x3F
+mduinolora.bootloader.lock_bits=0x0F
+mduinolora.bootloader.high_fuses=0xD8
+mduinolora.bootloader.extended_fuses=0xFD
+mduinolora.bootloader.file=mduino.hex
+
+mduinolora.build.f_cpu=16000000L
+mduinolora.build.core=industrialshields
+mduinolora.build.mcu=atmega2560
+mduinolora.build.board=AVR_MEGA2560
+mduinolora.build.usb_product="M-Duino"
+
+## M-Duino LoRa 19R+
+## -------------------------
+mduinolora.menu.cpu.mduino19rpluslora=M-Duino 19R+ LoRa
+mduinolora.menu.cpu.mduino19rpluslora.build.variant=mduinoplus
+mduinolora.menu.cpu.mduino19rpluslora.build.extra_flags=-DMDUINO_PLUS -DMDUINO_19R_PLUS -DMDUINO_LORA_PLUS
+
+## M-Duino LoRa 21+
+## -------------------------
+mduinolora.menu.cpu.mduino21pluslora=M-Duino 21+ LoRa
+mduinolora.menu.cpu.mduino21pluslora.build.variant=mduinoplus
+mduinolora.menu.cpu.mduino21pluslora.build.extra_flags=-DMDUINO_PLUS -DMDUINO_21_PLUS -DMDUINO_LORA_PLUS
+
+## M-Duino LoRa 38AR+
+## -------------------------
+mduinolora.menu.cpu.mduino38arpluslora=M-Duino 38AR+ LoRa
+mduinolora.menu.cpu.mduino38arpluslora.build.variant=mduinoplus
+mduinolora.menu.cpu.mduino38arpluslora.build.extra_flags=-DMDUINO_PLUS -DMDUINO_38AR_PLUS -DMDUINO_LORA_PLUS
+
+## M-Duino LoRa 38R+
+## -------------------------
+mduinolora.menu.cpu.mduino38rpluslora=M-Duino 38R+ LoRa
+mduinolora.menu.cpu.mduino38rpluslora.build.variant=mduinoplus
+mduinolora.menu.cpu.mduino38rpluslora.build.extra_flags=-DMDUINO_PLUS -DMDUINO_38R_PLUS -DMDUINO_LORA_PLUS
+
+## M-Duino LoRa 42+
+## -------------------------
+mduinolora.menu.cpu.mduino42pluslora=M-Duino 42+ LoRa
+mduinolora.menu.cpu.mduino42pluslora.build.variant=mduinoplus
+mduinolora.menu.cpu.mduino42pluslora.build.extra_flags=-DMDUINO_PLUS -DMDUINO_42_PLUS -DMDUINO_LORA_PLUS
+
+## M-Duino LoRa 50RRA+
+## -------------------------
+mduinolora.menu.cpu.mduino50rrapluslora=M-Duino 50RRA+ LoRa
+mduinolora.menu.cpu.mduino50rrapluslora.build.variant=mduinoplus
+mduinolora.menu.cpu.mduino50rrapluslora.build.extra_flags=-DMDUINO_PLUS -DMDUINO_50RRA_PLUS -DMDUINO_LORA_PLUS
+
+## M-Duino LoRa 53ARR+
+## -------------------------
+mduinolora.menu.cpu.mduino53arrpluslora=M-Duino 53ARR+ LoRa
+mduinolora.menu.cpu.mduino53arrpluslora.build.variant=mduinoplus
+mduinolora.menu.cpu.mduino53arrpluslora.build.extra_flags=-DMDUINO_PLUS -DMDUINO_53ARR_PLUS -DMDUINO_LORA_PLUS
+
+## M-Duino LoRa 54ARA+
+## -------------------------
+mduinolora.menu.cpu.mduino54arapluslora=M-Duino 54ARA+ LoRa
+mduinolora.menu.cpu.mduino54arapluslora.build.variant=mduinoplus
+mduinolora.menu.cpu.mduino54arapluslora.build.extra_flags=-DMDUINO_PLUS -DMDUINO_54ARA_PLUS -DMDUINO_LORA_PLUS
+
+## M-Duino LoRa 57AAR+
+## -------------------------
+mduinolora.menu.cpu.mduino57aarpluslora=M-Duino 57AAR+ LoRa
+mduinolora.menu.cpu.mduino57aarpluslora.build.variant=mduinoplus
+mduinolora.menu.cpu.mduino57aarpluslora.build.extra_flags=-DMDUINO_PLUS -DMDUINO_57AAR_PLUS -DMDUINO_LORA_PLUS
+
+## M-Duino LoRa 57R+
+## -------------------------
+mduinolora.menu.cpu.mduino57rpluslora=M-Duino 57R+ LoRa
+mduinolora.menu.cpu.mduino57rpluslora.build.variant=mduinoplus
+mduinolora.menu.cpu.mduino57rpluslora.build.extra_flags=-DMDUINO_PLUS -DMDUINO_57R_PLUS -DMDUINO_LORA_PLUS
+
+## M-Duino LoRa 58+
+## -------------------------
+mduinolora.menu.cpu.mduino58pluslora=M-Duino 58+ LoRa
+mduinolora.menu.cpu.mduino58pluslora.build.variant=mduinoplus
+mduinolora.menu.cpu.mduino58pluslora.build.extra_flags=-DMDUINO_PLUS -DMDUINO_58_PLUS -DMDUINO_LORA_PLUS
+
+######################
+#### M-Duino WiFi ####
+######################
+
+mduinowifi.name=M-Duino WiFi/BT family
+
+mduinowifi.vid.0=0x2341
+mduinowifi.pid.0=0x0010
+mduinowifi.vid.1=0x2341
+mduinowifi.pid.1=0x0042
+mduinowifi.vid.2=0x2A03
+mduinowifi.pid.2=0x0010
+mduinowifi.vid.3=0x2A03
+mduinowifi.pid.3=0x0042
+mduinowifi.vid.4=0x2341
+mduinowifi.pid.4=0x0210
+mduinowifi.vid.5=0x2341
+mduinowifi.pid.5=0x0242
+
+mduinowifi.upload.tool=avrdude
+mduinowifi.upload.maximum_data_size=8192
+mduinowifi.upload.protocol=wiring
+mduinowifi.upload.maximum_size=253952
+mduinowifi.upload.speed=115200
+
+mduinowifi.bootloader.tool=avrdude
+mduinowifi.bootloader.low_fuses=0xFF
+mduinowifi.bootloader.unlock_bits=0x3F
+mduinowifi.bootloader.lock_bits=0x0F
+mduinowifi.bootloader.high_fuses=0xD8
+mduinowifi.bootloader.extended_fuses=0xFD
+mduinowifi.bootloader.file=mduino.hex
+
+mduinowifi.build.f_cpu=16000000L
+mduinowifi.build.core=industrialshields
+mduinowifi.build.mcu=atmega2560
+mduinowifi.build.board=AVR_MEGA2560
+mduinowifi.build.usb_product="M-Duino"
+
+## M-Duino 19R+ WiFi/BT
+## -------------------------
+mduinowifi.menu.cpu.mduino19rpluswifi=M-Duino 19R+ WiFi/BT
+mduinowifi.menu.cpu.mduino19rpluswifi.build.variant=mduinoplus
+mduinowifi.menu.cpu.mduino19rpluswifi.build.extra_flags=-DMDUINO_PLUS -DMDUINO_19R_PLUS -DMDUINO_WIFI_PLUS
+
+## M-Duino 21+ WiFi/BT
+## -------------------------
+mduinowifi.menu.cpu.mduino21pluswifi=M-Duino 21+ WiFi/BT
+mduinowifi.menu.cpu.mduino21pluswifi.build.variant=mduinoplus
+mduinowifi.menu.cpu.mduino21pluswifi.build.extra_flags=-DMDUINO_PLUS -DMDUINO_21_PLUS -DMDUINO_WIFI_PLUS
+
+## M-Duino 38AR+ WiFi/BT
+## -------------------------
+mduinowifi.menu.cpu.mduino38arpluswifi=M-Duino 38AR+ WiFi/BT
+mduinowifi.menu.cpu.mduino38arpluswifi.build.variant=mduinoplus
+mduinowifi.menu.cpu.mduino38arpluswifi.build.extra_flags=-DMDUINO_PLUS -DMDUINO_38AR_PLUS -DMDUINO_WIFI_PLUS
+
+## M-Duino 38R+ WiFi/BT
+## -------------------------
+mduinowifi.menu.cpu.mduino38rpluswifi=M-Duino 38R+ WiFi/BT
+mduinowifi.menu.cpu.mduino38rpluswifi.build.variant=mduinoplus
+mduinowifi.menu.cpu.mduino38rpluswifi.build.extra_flags=-DMDUINO_PLUS -DMDUINO_38R_PLUS -DMDUINO_WIFI_PLUS
+
+## M-Duino 42+ WiFi/BT
+## -------------------------
+mduinowifi.menu.cpu.mduino42pluswifi=M-Duino 42+ WiFi/BT
+mduinowifi.menu.cpu.mduino42pluswifi.build.variant=mduinoplus
+mduinowifi.menu.cpu.mduino42pluswifi.build.extra_flags=-DMDUINO_PLUS -DMDUINO_42_PLUS -DMDUINO_WIFI_PLUS
+
+## M-Duino 50RRA+ WiFi/BT
+## -------------------------
+mduinowifi.menu.cpu.mduino50rrapluswifi=M-Duino 50RRA+ WiFi/BT
+mduinowifi.menu.cpu.mduino50rrapluswifi.build.variant=mduinoplus
+mduinowifi.menu.cpu.mduino50rrapluswifi.build.extra_flags=-DMDUINO_PLUS -DMDUINO_50RRA_PLUS -DMDUINO_WIFI_PLUS
+
+## M-Duino 53ARR+ WiFi/BT
+## -------------------------
+mduinowifi.menu.cpu.mduino53arrpluswifi=M-Duino 53ARR+ WiFi/BT
+mduinowifi.menu.cpu.mduino53arrpluswifi.build.variant=mduinoplus
+mduinowifi.menu.cpu.mduino53arrpluswifi.build.extra_flags=-DMDUINO_PLUS -DMDUINO_53ARR_PLUS -DMDUINO_WIFI_PLUS
+
+## M-Duino 54ARA+ WiFi/BT
+## -------------------------
+mduinowifi.menu.cpu.mduino54arapluswifi=M-Duino 54ARA+ WiFi/BT
+mduinowifi.menu.cpu.mduino54arapluswifi.build.variant=mduinoplus
+mduinowifi.menu.cpu.mduino54arapluswifi.build.extra_flags=-DMDUINO_PLUS -DMDUINO_54ARA_PLUS -DMDUINO_WIFI_PLUS
+
+## M-Duino 57AAR+ WiFi/BT
+## -------------------------
+mduinowifi.menu.cpu.mduino57aarpluswifi=M-Duino 57AAR+ WiFi/BT
+mduinowifi.menu.cpu.mduino57aarpluswifi.build.variant=mduinoplus
+mduinowifi.menu.cpu.mduino57aarpluswifi.build.extra_flags=-DMDUINO_PLUS -DMDUINO_57AAR_PLUS -DMDUINO_WIFI_PLUS
+
+## M-Duino 57R+ WiFi/BT
+## -------------------------
+mduinowifi.menu.cpu.mduino57rpluswifi=M-Duino 57R+ WiFi/BT
+mduinowifi.menu.cpu.mduino57rpluswifi.build.variant=mduinoplus
+mduinowifi.menu.cpu.mduino57rpluswifi.build.extra_flags=-DMDUINO_PLUS -DMDUINO_57R_PLUS -DMDUINO_WIFI_PLUS
+
+## M-Duino 58+ WiFi/BT
+## -------------------------
+mduinowifi.menu.cpu.mduino58pluswifi=M-Duino 58+ WiFi/BT
+mduinowifi.menu.cpu.mduino58pluswifi.build.variant=mduinoplus
+mduinowifi.menu.cpu.mduino58pluswifi.build.extra_flags=-DMDUINO_PLUS -DMDUINO_58_PLUS -DMDUINO_WIFI_PLUS
+
+######################
+# M-Duino  WiFi+GPRS #
+######################
+
+mduinowifigprs.name=M-Duino WiFi/BT + GPRS family
+
+mduinowifigprs.vid.0=0x2341
+mduinowifigprs.pid.0=0x0010
+mduinowifigprs.vid.1=0x2341
+mduinowifigprs.pid.1=0x0042
+mduinowifigprs.vid.2=0x2A03
+mduinowifigprs.pid.2=0x0010
+mduinowifigprs.vid.3=0x2A03
+mduinowifigprs.pid.3=0x0042
+mduinowifigprs.vid.4=0x2341
+mduinowifigprs.pid.4=0x0210
+mduinowifigprs.vid.5=0x2341
+mduinowifigprs.pid.5=0x0242
+
+mduinowifigprs.upload.tool=avrdude
+mduinowifigprs.upload.maximum_data_size=8192
+mduinowifigprs.upload.protocol=wiring
+mduinowifigprs.upload.maximum_size=253952
+mduinowifigprs.upload.speed=115200
+
+mduinowifigprs.bootloader.tool=avrdude
+mduinowifigprs.bootloader.low_fuses=0xFF
+mduinowifigprs.bootloader.unlock_bits=0x3F
+mduinowifigprs.bootloader.lock_bits=0x0F
+mduinowifigprs.bootloader.high_fuses=0xD8
+mduinowifigprs.bootloader.extended_fuses=0xFD
+mduinowifigprs.bootloader.file=mduino.hex
+
+mduinowifigprs.build.f_cpu=16000000L
+mduinowifigprs.build.core=industrialshields
+mduinowifigprs.build.mcu=atmega2560
+mduinowifigprs.build.board=AVR_MEGgprsA2560
+mduinowifigprs.build.usb_product="gprsM-Duino"
+
+## M-Duino 19R+ WiFi/BT
+## -------------------------
+mduinowifigprs.menu.cpu.mduino19rpluswifigprs=M-Duino 19R+ WiFi/BT + GPRS
+mduinowifigprs.menu.cpu.mduino19rpluswifigprs.build.variant=mduinoplus
+mduinowifigprs.menu.cpu.mduino19rpluswifigprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_19R_PLUS -DMDUINO_WIFI_GPRS_PLUS
+
+## M-Duino 21+ WiFi/BT
+## -------------------------
+mduinowifigprs.menu.cpu.mduino21pluswifigprs=M-Duino 21+ WiFi/BT + GPRS
+mduinowifigprs.menu.cpu.mduino21pluswifigprs.build.variant=mduinoplus
+mduinowifigprs.menu.cpu.mduino21pluswifigprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_21_PLUS -DMDUINO_WIFI_GPRS_PLUS
+
+## M-Duino 38AR+ WiFi/BT
+## -------------------------
+mduinowifigprs.menu.cpu.mduino38arpluswifigprs=M-Duino 38AR+ WiFi/BT + GPRS
+mduinowifigprs.menu.cpu.mduino38arpluswifigprs.build.variant=mduinoplus
+mduinowifigprs.menu.cpu.mduino38arpluswifigprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_38AR_PLUS -DMDUINO_WIFI_GPRS_PLUS
+
+## M-Duino 38R+ WiFi/BT
+## -------------------------
+mduinowifigprs.menu.cpu.mduino38rpluswifigprs=M-Duino 38R+ WiFi/BT + GPRS
+mduinowifigprs.menu.cpu.mduino38rpluswifigprs.build.variant=mduinoplus
+mduinowifigprs.menu.cpu.mduino38rpluswifigprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_38R_PLUS -DMDUINO_WIFI_GPRS_PLUS
+
+## M-Duino 42+ WiFi/BT
+## -------------------------
+mduinowifigprs.menu.cpu.mduino42pluswifigprs=M-Duino 42+ WiFi/BT + GPRS
+mduinowifigprs.menu.cpu.mduino42pluswifigprs.build.variant=mduinoplus
+mduinowifigprs.menu.cpu.mduino42pluswifigprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_42_PLUS -DMDUINO_WIFI_GPRS_PLUS
+
+## M-Duino 50RRA+ WiFi/BT
+## -------------------------
+mduinowifigprs.menu.cpu.mduino50rrapluswifigprs=M-Duino 50RRA+ WiFi/BT + GPRS
+mduinowifigprs.menu.cpu.mduino50rrapluswifigprs.build.variant=mduinoplus
+mduinowifigprs.menu.cpu.mduino50rrapluswifigprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_50RRA_PLUS -DMDUINO_WIFI_GPRS_PLUS
+
+## M-Duino 53ARR+ WiFi/BT
+## -------------------------
+mduinowifigprs.menu.cpu.mduino53arrpluswifigprs=M-Duino 53ARR+ WiFi/BT + GPRS
+mduinowifigprs.menu.cpu.mduino53arrpluswifigprs.build.variant=mduinoplus
+mduinowifigprs.menu.cpu.mduino53arrpluswifigprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_53ARR_PLUS -DMDUINO_WIFI_GPRS_PLUS
+
+## M-Duino 54ARA+ WiFi/BT
+## -------------------------
+mduinowifigprs.menu.cpu.mduino54arapluswifigprs=M-Duino 54ARA+ WiFi/BT + GPRS
+mduinowifigprs.menu.cpu.mduino54arapluswifigprs.build.variant=mduinoplus
+mduinowifigprs.menu.cpu.mduino54arapluswifigprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_54ARA_PLUS -DMDUINO_WIFI_GPRS_PLUS
+
+## M-Duino 57AAR+ WiFi/BT
+## -------------------------
+mduinowifigprs.menu.cpu.mduino57aarpluswifigprs=M-Duino 57AAR+ WiFi/BT + GPRS
+mduinowifigprs.menu.cpu.mduino57aarpluswifigprs.build.variant=mduinoplus
+mduinowifigprs.menu.cpu.mduino57aarpluswifigprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_57AAR_PLUS -DMDUINO_WIFI_GPRS_PLUS
+
+## M-Duino 57R+ WiFi/BT
+## -------------------------
+mduinowifigprs.menu.cpu.mduino57rpluswifigprs=M-Duino 57R+ WiFi/BT + GPRS
+mduinowifigprs.menu.cpu.mduino57rpluswifigprs.build.variant=mduinoplus
+mduinowifigprs.menu.cpu.mduino57rpluswifigprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_57R_PLUS -DMDUINO_WIFI_GPRS_PLUS
+
+## M-Duino 58+ WiFi/BT
+## -------------------------
+mduinowifigprs.menu.cpu.mduino58pluswifigprs=M-Duino 58+ WiFi/BT + GPRS
+mduinowifigprs.menu.cpu.mduino58pluswifigprs.build.variant=mduinoplus
+mduinowifigprs.menu.cpu.mduino58pluswifigprs.build.extra_flags=-DMDUINO_PLUS -DMDUINO_58_PLUS -DMDUINO_WIFI_GPRS_PLUS
+
+############################
+###### Spartan #############
+############################
+
+spartan.name=Spartan family
+spartan.build.core=industrialshields
+spartan.build.board=Spartan
+
+## Spartan 16DA
+## -------------------------
+spartan.menu.cpu.spartan16da=Spartan 16DA
+
+spartan.menu.cpu.spartan16da.vid.0=0x2341
+spartan.menu.cpu.spartan16da.pid.0=0x0036
+spartan.menu.cpu.spartan16da.vid.1=0x2341
+spartan.menu.cpu.spartan16da.pid.1=0x8036
+spartan.menu.cpu.spartan16da.vid.2=0x2A03
+spartan.menu.cpu.spartan16da.pid.2=0x0036
+spartan.menu.cpu.spartan16da.vid.3=0x2A03
+spartan.menu.cpu.spartan16da.pid.3=0x8036
+
+spartan.menu.cpu.spartan16da.upload.tool=avrdude
+spartan.menu.cpu.spartan16da.upload.protocol=avr109
+spartan.menu.cpu.spartan16da.upload.maximum_size=28672
+spartan.menu.cpu.spartan16da.upload.maximum_data_size=2560
+spartan.menu.cpu.spartan16da.upload.speed=460800
+spartan.menu.cpu.spartan16da.upload.disable_flushing=true
+spartan.menu.cpu.spartan16da.upload.use_1200bps_touch=true
+spartan.menu.cpu.spartan16da.upload.wait_for_upload_port=true
+
+spartan.menu.cpu.spartan16da.bootloader.tool=avrdude
+spartan.menu.cpu.spartan16da.bootloader.low_fuses=0xff
+spartan.menu.cpu.spartan16da.bootloader.high_fuses=0xd8
+spartan.menu.cpu.spartan16da.bootloader.extended_fuses=0xcb
+spartan.menu.cpu.spartan16da.bootloader.file=ardbox.hex
+spartan.menu.cpu.spartan16da.bootloader.unlock_bits=0x3F
+spartan.menu.cpu.spartan16da.bootloader.lock_bits=0x2F
+
+spartan.menu.cpu.spartan16da.build.mcu=atmega32u4
+spartan.menu.cpu.spartan16da.build.f_cpu=16000000L
+spartan.menu.cpu.spartan16da.build.vid=0x2341
+spartan.menu.cpu.spartan16da.build.pid=0x8036
+spartan.menu.cpu.spartan16da.build.usb_product="Spartan"
+spartan.menu.cpu.spartan16da.build.board=AVR_LEONARDO
+spartan.menu.cpu.spartan16da.build.variant=spartan
+spartan.menu.cpu.spartan16da.build.extra_flags={build.usb_flags} -DSPARTAN -DSPARTAN_16DA
+
+## Spartan 16RDA
+## -------------------------
+spartan.menu.cpu.spartan16rda=Spartan 16RDA
+
+spartan.menu.cpu.spartan16rda.vid.0=0x2341
+spartan.menu.cpu.spartan16rda.pid.0=0x0036
+spartan.menu.cpu.spartan16rda.vid.1=0x2341
+spartan.menu.cpu.spartan16rda.pid.1=0x8036
+spartan.menu.cpu.spartan16rda.vid.2=0x2A03
+spartan.menu.cpu.spartan16rda.pid.2=0x0036
+spartan.menu.cpu.spartan16rda.vid.3=0x2A03
+spartan.menu.cpu.spartan16rda.pid.3=0x8036
+
+spartan.menu.cpu.spartan16rda.upload.tool=avrdude
+spartan.menu.cpu.spartan16rda.upload.protocol=avr109
+spartan.menu.cpu.spartan16rda.upload.maximum_size=28672
+spartan.menu.cpu.spartan16rda.upload.maximum_data_size=2560
+spartan.menu.cpu.spartan16rda.upload.speed=460800
+spartan.menu.cpu.spartan16rda.upload.disable_flushing=true
+spartan.menu.cpu.spartan16rda.upload.use_1200bps_touch=true
+spartan.menu.cpu.spartan16rda.upload.wait_for_upload_port=true
+
+spartan.menu.cpu.spartan16rda.bootloader.tool=avrdude
+spartan.menu.cpu.spartan16rda.bootloader.low_fuses=0xff
+spartan.menu.cpu.spartan16rda.bootloader.high_fuses=0xd8
+spartan.menu.cpu.spartan16rda.bootloader.extended_fuses=0xcb
+spartan.menu.cpu.spartan16rda.bootloader.file=ardbox.hex
+spartan.menu.cpu.spartan16rda.bootloader.unlock_bits=0x3F
+spartan.menu.cpu.spartan16rda.bootloader.lock_bits=0x2F
+
+spartan.menu.cpu.spartan16rda.build.mcu=atmega32u4
+spartan.menu.cpu.spartan16rda.build.f_cpu=16000000L
+spartan.menu.cpu.spartan16rda.build.vid=0x2341
+spartan.menu.cpu.spartan16rda.build.pid=0x8036
+spartan.menu.cpu.spartan16rda.build.usb_product="Spartan"
+spartan.menu.cpu.spartan16rda.build.board=AVR_LEONARDO
+spartan.menu.cpu.spartan16rda.build.variant=spartan
+spartan.menu.cpu.spartan16rda.build.extra_flags={build.usb_flags} -DSPARTAN -DSPARTAN_16RDA
+
+## Spartan 19R
+## -------------------------
+spartan.menu.cpu.spartan19r=Spartan 19R
+
+spartan.menu.cpu.spartan19r.vid.0=0x2341
+spartan.menu.cpu.spartan19r.pid.0=0x0010
+spartan.menu.cpu.spartan19r.vid.1=0x2341
+spartan.menu.cpu.spartan19r.pid.1=0x0042
+spartan.menu.cpu.spartan19r.vid.2=0x2A03
+spartan.menu.cpu.spartan19r.pid.2=0x0010
+spartan.menu.cpu.spartan19r.vid.3=0x2A03
+spartan.menu.cpu.spartan19r.pid.3=0x0042
+spartan.menu.cpu.spartan19r.vid.4=0x2341
+spartan.menu.cpu.spartan19r.pid.4=0x0210
+spartan.menu.cpu.spartan19r.vid.5=0x2341
+spartan.menu.cpu.spartan19r.pid.5=0x0242
+
+spartan.menu.cpu.spartan19r.upload.tool=avrdude
+spartan.menu.cpu.spartan19r.upload.protocol=wiring
+spartan.menu.cpu.spartan19r.upload.maximum_size=253952
+spartan.menu.cpu.spartan19r.upload.maximum_data_size=8192
+spartan.menu.cpu.spartan19r.upload.speed=115200
+
+spartan.menu.cpu.spartan19r.bootloader.tool=avrdude
+spartan.menu.cpu.spartan19r.bootloader.low_fuses=0xff
+spartan.menu.cpu.spartan19r.bootloader.high_fuses=0xd8
+spartan.menu.cpu.spartan19r.bootloader.extended_fuses=0xfd
+spartan.menu.cpu.spartan19r.bootloader.file=mduino.hex
+spartan.menu.cpu.spartan19r.bootloader.unlock_bits=0x3f
+spartan.menu.cpu.spartan19r.bootloader.lock_bits=0x0f
+
+spartan.menu.cpu.spartan19r.build.f_cpu=16000000L
+spartan.menu.cpu.spartan19r.build.mcu=atmega2560
+spartan.menu.cpu.spartan19r.build.board=AVR_MEGA2560
+spartan.menu.cpu.spartan19r.build.usb_product="Spartan"
+spartan.menu.cpu.spartan19r.build.variant=spartan
+spartan.menu.cpu.spartan19r.build.extra_flags={build.usb_flags} -DSPARTAN -DSPARTAN_19R
+
+## Spartan 21
+## -------------------------
+spartan.menu.cpu.spartan21=Spartan 21
+
+spartan.menu.cpu.spartan21.vid.0=0x2341
+spartan.menu.cpu.spartan21.pid.0=0x0010
+spartan.menu.cpu.spartan21.vid.1=0x2341
+spartan.menu.cpu.spartan21.pid.1=0x0042
+spartan.menu.cpu.spartan21.vid.2=0x2A03
+spartan.menu.cpu.spartan21.pid.2=0x0010
+spartan.menu.cpu.spartan21.vid.3=0x2A03
+spartan.menu.cpu.spartan21.pid.3=0x0042
+spartan.menu.cpu.spartan21.vid.4=0x2341
+spartan.menu.cpu.spartan21.pid.4=0x0210
+spartan.menu.cpu.spartan21.vid.5=0x2341
+spartan.menu.cpu.spartan21.pid.5=0x0242
+
+spartan.menu.cpu.spartan21.upload.tool=avrdude
+spartan.menu.cpu.spartan21.upload.protocol=wiring
+spartan.menu.cpu.spartan21.upload.maximum_size=253952
+spartan.menu.cpu.spartan21.upload.maximum_data_size=8192
+spartan.menu.cpu.spartan21.upload.speed=115200
+
+spartan.menu.cpu.spartan21.bootloader.tool=avrdude
+spartan.menu.cpu.spartan21.bootloader.low_fuses=0xff
+spartan.menu.cpu.spartan21.bootloader.high_fuses=0xd8
+spartan.menu.cpu.spartan21.bootloader.extended_fuses=0xfd
+spartan.menu.cpu.spartan21.bootloader.file=mduino.hex
+spartan.menu.cpu.spartan21.bootloader.unlock_bits=0x3f
+spartan.menu.cpu.spartan21.bootloader.lock_bits=0x0f
+
+spartan.menu.cpu.spartan21.build.f_cpu=16000000L
+spartan.menu.cpu.spartan21.build.mcu=atmega2560
+spartan.menu.cpu.spartan21.build.board=AVR_MEGA2560
+spartan.menu.cpu.spartan21.build.usb_product="Spartan"
+spartan.menu.cpu.spartan21.build.variant=spartan
+spartan.menu.cpu.spartan21.build.extra_flags={build.usb_flags} -DSPARTAN -DSPARTAN_21

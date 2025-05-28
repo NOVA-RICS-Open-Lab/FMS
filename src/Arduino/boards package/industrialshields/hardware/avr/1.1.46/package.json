@@ -1,0 +1,19 @@
+{
+    "name": "framework-industrialshields-avr",
+    "version": "1.1.46",
+    "description": "Industrial Shields fork of ArduinoAVR cores",
+    "license": "LGPL-3.0-or-later",
+    "keywords": [
+        "framework",
+        "arduino"
+    ],
+    "engines": {
+        "platformio": "^6"
+    },
+    "frameworks": {
+        "arduino": {
+            "package": "framework-industrialshields-avr",
+            "script": "builder/frameworks/arduino.py"
+        }
+    }
+}

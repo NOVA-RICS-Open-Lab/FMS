@@ -1,6 +1,6 @@
 <div  align="center"> 
 
-# Open Modular Controller for Automation Technologies
+# Human-Centric Digital Twin-Driven Approach for Plug-and- Produce in Modular Cyber-Physical Production Systems
 [![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://img.shields.io/badge/DOI-ICPS_2024-darkblue)](https://doi.org/10.1109/ETFA61755.2024.10710730)
 
@@ -101,7 +101,11 @@ Follow these steps to setup the FMS-Kit controller and digital twin:
     In order to use the controller, the correct board package must be installed in your Arduino IDE. This can be done in 2 ways:
     1. Arduino way
         - Inside your Arduino IDE, go to *Preferences*
-        - Copy the link ```http://apps.industrialshields.com/main/arduino/boards/package_industrialshields_index.json``` to your *Additional boards manager URLs* parameter.
+        - Copy the link below to your *Additional boards manager URLs* parameter:
+          ```
+          http://apps.industrialshields.com/main/arduino/boards/package_industrialshields_index.json
+          ```
+        
         - Save and exit
     2. Repository way
         - Place the libraries found in the repository at [libraries](./src/Arduino/libraries/) inside your arduino libraries folder.
@@ -200,35 +204,53 @@ The available services are divided in 2 sections:
 
   - Transport AB - Move product from Conveyor A to Conveyor B
   
-    ```192.168.x.x:80/passadeiras?skill=AB```
+    ```
+    192.168.x.x:80/passadeiras?skill=AB
+    ```
   - Transport BC - Move product from Conveyor B to Conveyor C
   
-    ```192.168.x.x:80/passadeiras?skill=BC```
+    ```
+    192.168.x.x:80/passadeiras?skill=BC
+    ```
   - Transport CD - Move product from Conveyor C to Conveyor D
   
-    ```192.168.x.x:80/passadeiras?skill=CD```
+    ```
+    192.168.x.x:80/passadeiras?skill=CD
+    ```
   - Transport DE - Move product from Conveyor D to Conveyor E
   
-    ```192.168.x.x:80/passadeiras?skill=DE```
+    ```
+    192.168.x.x:80/passadeiras?skill=DE
+    ```
   - Transport EF - Move product from Conveyor E to Conveyor F
   
-    ```192.168.x.x:80/passadeiras?skill=EF```
+    ```
+    192.168.x.x:80/passadeiras?skill=EF
+    ```
   - Transport FA - Move product from Conveyor F to Conveyor A
   
-    ```192.168.x.x:80/passadeiras?skill=FA```
+    ```
+    192.168.x.x:80/passadeiras?skill=FA
+    ```
 
 - #### Stations
   Comands to control the skills tower.
 
   - Drill - Tower performs a drill on the product
   
-    ```192.168.x.x:80/statacao?skill=0```
+    ```
+    192.168.x.x:80/statacao?skill=0
+    ```
   - Screw - Tower performs a screw on the product
   
-    ```192.168.x.x:80/statacao?skill=1```
+    ```
+    192.168.x.x:80/statacao?skill=1
+    ```
   - Calibrate - Calibrate Tower
 
-    ```192.168.x.x:80/statacao?skill=2```
+    ```
+    192.168.x.x:80/statacao?skill=2
+    ```
 
 ### Comunication
 

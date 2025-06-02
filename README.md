@@ -6,7 +6,7 @@
 
 [Nelson Freitas](https://scholar.google.com/citations?user=BDOCGnoAAAAJ&hl=pt-PT&oi=ao)<sup>1</sup>, 
 [Miguel Arvana](https://scholar.google.com/citations?user=UBvr388AAAAJ&hl=pt-PT)<sup>1</sup>,
-[Tiago Gouveia]()<sup>1</sup>, 
+[Tiago Gouveia](https://www.linkedin.com/in/tiago-gouveia-1552a529b/)<sup>1</sup>, 
 [Raúl Mestre Dinis](https://www.linkedin.com/in/ra%C3%BAl-mestre-dinis/)<sup>1</sup>,
 [Daniela Machado]()<sup>1</sup>,
 [Andre Rocha](https://scholar.google.pt/citations?user=k1GIyqcAAAAJ&hl=pt-PT)<sup>1</sup>,

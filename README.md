@@ -33,24 +33,45 @@ Lisbon, 2829-516 Lisbon, Portugal
 Follow these steps to setup the FMS-Kit controller and digital twin:
 
 1. **Industrial Shields 57R+**
-   - Locate the developed Arduino Code in the repository at [Kit FMS.exe](./src/Unity/Exec/Kit%20FMS.exe).
-   - Place the libraries found in the repository at [libraries](./src/Arduino/libraries/) inside your arduino libraries folder.
-   - It is also needed to get the Industrial Shields boards package found in the repository at [package](./src/Arduino/boards%20package/)
-   - Either place this folder in your arduino package's folder or go to preferences and place the link "http://apps.industrialshields.com/main/arduino/boards/package_industrialshields_index.json" in your Additional boards manager URLs parameter. Now you can find the Industrial Shields industrialshields-avr boards package in your package explorer.
-   - Select the M-Duino family board.
-   - Select the M-Duino 57R+ model.
+   
+    In order to use the controller, the correct board package must be installed in your Arduino IDE. This can be done in 2 ways:
+   1. Arduino way
+      - Inside your Arduino IDE, go to *Preferences*
+      - Copy the link ```http://apps.industrialshields.com/main/arduino/boards/package_industrialshields_index.json``` to your *Additional boards manager URLs* parameter.
+      - Save and exit
+   2. Repository way
+      - Place the libraries found in the repository at [libraries](./src/Arduino/libraries/) inside your arduino libraries folder.
+      - Place Industrial Shields boards package found in the repository at [package](./src/Arduino/boards%20package/) in your arduino package's folder.
+
+    To complete the setup
+
+   - Open your *Boards Manager* (Ctrl + Shift + B)
+   - Install the ```industrialshields-avr``` boards package.
+   - Select the ```M-Duino family``` board.
+   - Select the ```M-Duino 57R+``` model.
+   - Locate the developed Arduino Code in the repository [here](./src/Arduino/KIT_FMS_DigitalShadow/KIT_FMS_DigitalShadow.ino).
    - Edit the IP configuration present in the start of the code to your desired configuration.
    - Upload the code to the controller.
 
 1. **HMI App Instalation**
-   - Locate the Kit FMS APK files in the repository at [Kit FMS.exe](./src/Unity/Exec/Kit%20FMS.exe).
-   - Use this apk in a android mobile device of your choosing.
+   - Locate the Kit FMS APK files in the repository at [Kit FMS.apk](./src/HMI/Kit%20FMS.apk).
+   - Execute apk in a android mobile device of your choosing.
 
 2. **Digital Twin Deployment**
+  
    - Execute the file Kit FMS.exe in the repository at [Kit FMS.exe](./src/Unity/Exec/Kit%20FMS.exe).
-   - In the DT, press "DEBUG" in the top left corner.
-   - In the HMI, press "CHANGE IP", place the IP found in the DT's DEBUG Interface. 
-   - In the DT, press "SETTINGS" in the top left corner.
+   
+
+3. **IP Configuration**
+
+  1. HMI IPs
+
+      - In the DT, press "DEBUG" in the top left corner.
+      - In the HMI, press "CHANGE IP", place the IP found in the DT's DEBUG Interface.
+
+  2. DT IPs
+
+      - In the DT, press "SETTINGS" in the top left corner.
       - Place the "TABLET IP" found in your mobile device. 
       - Place the "Arduino IP" found in your controller's arduino code. 
 
@@ -60,19 +81,24 @@ If all steps are followed, your system is now ready for operation.
 
 [FAZER SEMPRE QUE É DESLIGADO O KIT FMS/INTELLIJ]
 
-1. Abrir o Kit FMS no PC
-2. Abrir o Kit FMS no Tablet
-3. Abrir o IntelliJ no PC com o código do André (é recomendado usar o ficheiro que está em .INTELLIJ ANDRE/CTS_ANDRE)
-4. Correr o código do André
-	4.1 Se desejado, ver os agents a ficarem online no menu "DEBUG" da Unity
-5. No Kit FMS do PC, no canto superior esquerdo clicar no botão "CONNECT"
-	5.1  Se desejado, ver o arduino a ficar online no menu "DEBUG" da Unity
+## Usage instructions
 
-### Usage instructions
-Once your PCB and ESP setup is complete, you can begin using the device. The ESP manages the input and output for each control pin, with a standard operating voltage of 24V. Please note:
+### Everytime the system is turned off
 
-- **Control Limitations**: These pins are designed for control signals only. Avoid applying high current loads to prevent damage.
-- **Testing & Example Code**: Refer to the [tests](./tests/) folder for use case examples and tests that helped validate board functionality. This includes the protoboard validation, Wi-Fi connection, Web Server and IP connection.
+  1. Start Kit FMS DT
+  2. Start Kit FMS HMI
+  3. Open the Agents IntelliJ Project found in the repository at [](./src/Agents/CTS_Andre)
+  4. Run the Agents Program
+  6. In the Kit FMS DT, press "CONNECT" on the top left corner
+  
+> **NOTE:** In order to verify the setup, go to the "DEBUG" menu in the DT and see that both Agents and Tablet status are "ON".
+
+### How to launch a product ?
+
+1. No tablet, dizer em que lado se encontra o operador.
+2. No KIT FMS do PC, no canto superior esquerdo clicar no botão "SETUP", dizer quais Skills estão disponiveis em que operadores.
+3. No KIT FMS do PC, no canto superior esquerdo clicar no botão "LAUNCH", dizer quais as ações que quer que aconteça no bloco. (O Kit fisico não gosta muito de dar voltas com uma só peça e fica preso nos sitios, é recomendado meter as duas peças na mesma volta)
+4. Quando pedido, clicar o tablet a dizer que foi colocada uma peça.
 
 Follow these guidelines, and your project should operate as expected!
 
@@ -102,11 +128,7 @@ FMS
 ```
 
 ## <div align="center">Documentation</div>
-The [docs](./docs/) directory contains extensive resources, including schematics, materials lists, and PCB files, as well as the original master’s dissertation that inspired this project. Explore this folder to access all necessary assets for building, assembling, and understanding the hardware.
-
-The presented use case for the protoboard validation showcases an asynchronous Web Server, providing a more stable connection than a synchronous web server. A toggle switch sends an HTTP request to the Processing Unit Module, initiating movement in the Kit. When the switch is active, it enables continuous operation of the Kit's process. Upon deactivation, the Industrial Kit halts movement at the start of the next cycle.
-
-> **Note**: The resistors R1, R4, R5, R6, R9, R13, and R21, **originally specified as 1.1K, have been updated to 33K** in both the schematic and materials list. This adjustment was made due to performance issues with certain conveyor belts that were not functional with the previous resistor values. Documenting this change is essential for any future debugging.
+The [docs](./docs/) directory contains related investigation work conducted on the implemented system
 
 ## <div align="center">Contribution Guidelines</div>
 NOVA RICS Open Lab open source, and we welcome contributions from the community! See the [Contribution](CONTRIBUTING.md) guide for more information on the development workflow and the internals of the wandb library. For project related bugs and feature requests, visit [GitHub Issues](https://github.com/NOVA-RICS-Open-Lab/open-modular-controller/issues) or contact novaricsopenlab@gmail.com
@@ -141,13 +163,7 @@ For any questions regarding this or any other project please contact us at novar
 
 CONCLUIDO
 
-### =[COMO LANÇAR UM PRODUTO]=
-[FAZER SEMPRE QUE DESEJADO]
 
-1. No tablet, dizer em que lado se encontra o operador.
-2. No KIT FMS do PC, no canto superior esquerdo clicar no botão "SETUP", dizer quais Skills estão disponiveis em que operadores.
-3. No KIT FMS do PC, no canto superior esquerdo clicar no botão "LAUNCH", dizer quais as ações que quer que aconteça no bloco. (O Kit fisico não gosta muito de dar voltas com uma só peça e fica preso nos sitios, é recomendado meter as duas peças na mesma volta)
-4. Quando pedido, clicar o tablet a dizer que foi colocada uma peça.
 
 CONCLUIDO
 

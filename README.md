@@ -108,15 +108,29 @@ Follow these steps to setup the FMS-Kit controller and digital twin:
         
         - Save and exit
     2. Repository way
-        - Place the libraries found in the repository at [libraries](./src/Arduino/libraries/) inside your arduino libraries folder.
         - Place Industrial Shields boards package found in the repository at [package](./src/Arduino/boards%20package/) in your arduino package's folder.
 
-      To complete the setup
+      Now we can select our board:
 
     - Open your *Boards Manager* (Ctrl + Shift + B)
     - Install the ```industrialshields-avr``` boards package.
     - Select the ```M-Duino family``` board.
     - Select the ```M-Duino 57R+``` model.
+    
+    You also need the correct Libraies. They can be installed in 2 ways:
+    1. Arduino way
+        1. Arduino JSON library
+          
+            - The [oficial website](https://arduinojson.org/v7/how-to/install-arduinojson/) offers really good documentation and multiple installation methods.
+        
+        2. Arduino FreeRTOS library
+            - The [oficial repository](https://github.com/feilipu/Arduino_FreeRTOS_Library) contains all the relevant information on how to install and use.
+         
+    2. Repository way
+        - Place the libraries found in the repository at [libraries](./src/Arduino/libraries/) inside your arduino libraries folder.
+    
+    Now you can upload the code:
+
     - Locate the developed Arduino Code in the repository [here](./src/Arduino/KIT_FMS_DigitalShadow/KIT_FMS_DigitalShadow.ino).
     - Edit the IP configuration present in the start of the code to your desired configuration.
     - Upload the code to the controller.

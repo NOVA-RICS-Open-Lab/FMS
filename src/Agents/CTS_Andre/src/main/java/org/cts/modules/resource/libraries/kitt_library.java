@@ -10,18 +10,20 @@ import java.io.IOException;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
+import org.cts.utilities.Constants;
+
 public class kitt_library {
 
     public static Semaphore kittBeingUsed = new Semaphore(1);
 
-    static String ip = "192.168.2.28";
+    //static String ip = "192.168.10.1";
 
     public static void executeTransporte(String skillID) throws IOException {
         OkHttpClient client = new OkHttpClient();
         client.setConnectTimeout(3600, TimeUnit.SECONDS);
         client.setReadTimeout(3600, TimeUnit.SECONDS);
         client.setWriteTimeout(3600, TimeUnit.SECONDS);
-        Request request = new Request.Builder().url("http://192.168.2.28/passadeiras?skill=" + skillID).build();
+        Request request = new Request.Builder().url("http://"+ Constants.controllerIP +"/passadeiras?skill=" + skillID).build();
         try {
             kitt_library.kittBeingUsed.acquire();
             Thread.sleep(100);
@@ -38,7 +40,7 @@ public class kitt_library {
         client.setConnectTimeout(3600, TimeUnit.SECONDS);
         client.setReadTimeout(3600, TimeUnit.SECONDS);
         client.setWriteTimeout(3600, TimeUnit.SECONDS);
-        Request request = new Request.Builder().url("http://192.168.2.28/estacao?skill=" + skillID).build();
+        Request request = new Request.Builder().url("http://"+ Constants.controllerIP +"/estacao?skill=" + skillID).build();
         try {
             kitt_library.kittBeingUsed.acquire();
             Thread.sleep(100);

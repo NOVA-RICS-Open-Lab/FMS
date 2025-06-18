@@ -150,8 +150,15 @@ Follow these steps to setup the FMS-Kit controller and digital twin:
 
     1. HMI IPs
 
-        - In the DT, press "DEBUG" in the top left corner.
-        - In the HMI, press "CHANGE IP", place the IP found in the DT's DEBUG Interface.
+        1. In the DT, press "DEBUG" in the top left corner.
+
+            If the PC ip is not similar to ```192.168.x.x```.
+            1. Open the *Control Panel*
+            2. Go to the *Network and Sharing Center*
+            3. Press *Change adapter settings*
+            4. Ensure you only have *Ethernet* and *Wi-Fi*.
+            (Usually *vEthernet* is on)
+        1. In the HMI, press "CHANGE IP", place the IP found in the DT's DEBUG Interface.
 
     2. DT IPs
 

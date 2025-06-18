@@ -19,8 +19,8 @@ public class Constants {
     public static final String ONTOLOGY_REQUEST_UNPLUG_RESOURCE = "REQ_UNPLUG_RESOURCE";
     public static final String ONTOLOGY_REQUEST_UPDATE_CONFIG = "REQ_UPDATE_CONFIG";
 
-    public static String tabletIP = "192.168.2.102";
-
+    public static String tabletIP = "192.168.250.101";
+    public static String controllerIP = "192.168.10.1";
     public enum ResourceType {
         Robot,Station,Human
     }

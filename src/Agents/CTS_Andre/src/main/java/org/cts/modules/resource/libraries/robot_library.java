@@ -29,6 +29,6 @@ public class robot_library {
     }
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        executeSkill("Skill_Blue_2","B");
+        executeSkill("Skill_Blue_2","F");
     }
 }

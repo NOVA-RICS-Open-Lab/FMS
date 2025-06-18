@@ -7,7 +7,9 @@ import com.squareup.okhttp.Response;
 import jade.core.Agent;
 import jade.core.behaviours.TickerBehaviour;
 import jade.wrapper.StaleProxyException;
+import org.aspectj.apache.bcel.classfile.ConstantString;
 import org.cts.modules.resource.libraries.kitt_library;
+import org.cts.utilities.Constants;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,7 +30,7 @@ public class DetectRobotBehaviour extends TickerBehaviour {
         super(a, period);
     }
 
-    static String ip = "192.168.2.28";
+    //static String ip = "192.168.10.1";
 
     boolean Robot1ToPlug = false, Robot2ToPlug = false;
 
@@ -78,7 +80,7 @@ public class DetectRobotBehaviour extends TickerBehaviour {
         client.setReadTimeout(3600, TimeUnit.SECONDS);
         client.setWriteTimeout(3600, TimeUnit.SECONDS);
 
-        Request request = new Request.Builder().url("http://192.168.2.28/sensores").build();
+        Request request = new Request.Builder().url("http://"+ Constants.controllerIP +"/sensores").build();
         try {
             kitt_library.kittBeingUsed.acquire();
             Thread.sleep(100);
